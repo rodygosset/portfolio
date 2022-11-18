@@ -6,7 +6,7 @@ It is [statically generated](https://nextjs.org/docs/basic-features/pages#static
 ## FEATURES
 
 If you want to learn from how I integrated and implemented this project,  
-check out the [How It's Made]() page on the website
+check out the [How It's Made](https://github.com/rodygosset/portfolio/blob/main/public/markdown/en/HOWITSMADE.md) page.
 
 The website is structured internally to support several languages.  
 For now, only English and French are available.

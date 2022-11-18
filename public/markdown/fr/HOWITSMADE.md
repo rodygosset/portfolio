@@ -3,4 +3,27 @@
 Si vous êtes curieux de savoir comment j'ai réalisé ce projet,  
 vous êtes au bon endroit :)
 
-<***TODO***/>
+## OBJECTIFS DU PROJET
+
+*TODO*
+
+## DESIGN 
+
+*TODO*
+
+## AVANTAGES D'UNE GÉNÉRATION STATIQUE
+
+*TODO*
+
+## MULTIPLES LANGUES
+
+*TODO*
+
+## MODE JOUR & MODE NUIT
+
+*TODO*
+
+## ANIMATIONS
+
+*TODO*
+

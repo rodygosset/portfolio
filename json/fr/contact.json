@@ -1,0 +1,33 @@
+{
+    "sectionTitle": "ET SI ON GARDAIT CONTACT ?",
+    "caption": "Qui sait, on sera peut-être même amenés à collaborer !",
+    "formFields": {
+        "firtName": {
+            "label": "Prénom",
+            "placeholder": "Entrez votre prénom",
+            "icon": "fa-solid fa-user"
+        },
+        "lastName": {
+            "label": "Nom",
+            "placeholder": "Entrez votre nom",
+            "icon": "fa-solid fa-user"
+        },
+        "phoneNumber": {
+            "label": "Phone number",
+            "placeholder": "Entrez votre numéro de téléphone",
+            "icon": "fa-solid fa-phone"
+        },
+        "email": {
+            "label": "Email",
+            "placeholder": "votreadressemail@siteweb.com",
+            "icon": "fa-solid fa-envelope"
+        },
+        "message": {
+            "label": "Laissez-moi un message",
+            "placeholder": "Hello!"
+        },
+        "submit": {
+            "label": "Envoyer"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "greeting": "Hello, moi c’est ",
+    "jobTitle": "développeur & designer <br/>web",
+    "projectsLink": "Découvrez mes projets",
+    "introParagraph": "J’aspire à concevoir et <br/>réaliser des produits intuitifs <br/>pour les utilisateurs, <br/>tout en façonnant des interfaces graphiques visuellement attractives.",
+    "resumeDownloadButton": "Apprenez-en plus dans mon CV",
+    "interestsIntroText": "Ce que j'aime",
+    "interests": [
+        {
+            "name": "UI DESIGN",
+            "iconName": "fa-brands fa-figma"
+        },
+        {
+            "name": "DÉVELOPPEMENT WEB",
+            "iconName": "fa-solid fa-code"
+        },
+        {
+            "name": "PRODUCTION MUSICALE",
+            "iconName": "fa-solid fa-compact-disc"
+        }
+    ]
+}

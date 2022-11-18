@@ -1,0 +1,22 @@
+{
+    "greeting": "Hi, I'm ",
+    "jobTitle": "web developer <br/>designer",
+    "projectsLink": "Check out my work",
+    "introParagraph": "My aim is to design <br/>and bring to life products <br/>that speak to the end user, <br/>while crafting appealing aesthetics.",
+    "resumeDownloadButton": "Find out more in my resume",
+    "interestsIntroText": "I love",
+    "interests": [
+        {
+            "name": "UI DESIGN",
+            "iconName": "fa-brands fa-figma"
+        },
+        {
+            "name": "WEB DEVELOPMENT",
+            "iconName": "fa-solid fa-code"
+        },
+        {
+            "name": "MUSIC PRODUCTION",
+            "iconName": "fa-solid fa-compact-disc"
+        }
+    ]
+}

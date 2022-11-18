@@ -1,0 +1,67 @@
+[
+    {
+        "name": "NEXT.JS",
+        "icon": "image",
+        "image": "/icons/nextjs-logo.svg"
+    },
+    {
+        "name": "REACT",
+        "icon": "fa-brands fa-react"
+    },
+    {
+        "name": "JS",
+        "icon": "fa-brands fa-js"
+    },
+    {
+        "name": "NODE.JS",
+        "icon": "fa-brands fa-node-js"
+    },
+    {
+        "name": "HTLM",
+        "icon": "fa-brands fa-html5"
+    },
+    {
+        "name": "CSS",
+        "icon": "fa-brands fa-css3-alt"
+    },
+    {
+        "name": "JAVA",
+        "icon": "fa-brands fa-java"
+    },
+    {
+        "name": "PYTHON",
+        "icon": "fa-brands fa-python"
+    },
+    {
+        "name": "PHP",
+        "icon": "fa-brands fa-html5"
+    },
+    {
+        "name": "SQL",
+        "icon": "fa-brands fa-database"
+    },
+    {
+        "name": "C",
+        "icon": "fa-solid fa-square-c"
+    },
+    {
+        "name": "GIT",
+        "icon": "fa-brands fa-git"
+    },
+    {
+        "name": "GITHUB",
+        "icon": "fa-brands fa-github"
+    },
+    {
+        "name": "DOCKER",
+        "icon":"fa-brands fa-docker"
+    },
+    {
+        "name": "JIRA",
+        "icon": "fa-brands fa-jira"
+    },
+    {
+        "name": "FIGMA",
+        "icon": "fa-brands fa-figma"
+    }
+]

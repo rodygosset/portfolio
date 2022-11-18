@@ -1,0 +1,33 @@
+{
+    "sectionTitle": "LET'S GET IN TOUCH!",
+    "caption": "I'd love to hear from you, and maybe even collaborate!",
+    "formFields": {
+        "firtName": {
+            "label": "First name",
+            "placeholder": "Enter your first name",
+            "icon": "fa-solid fa-user"
+        },
+        "lastName": {
+            "label": "Last name",
+            "placeholder": "Enter your last name",
+            "icon": "fa-solid fa-user"
+        },
+        "phoneNumber": {
+            "label": "Phone number",
+            "placeholder": "Enter your phone number",
+            "icon": "fa-solid fa-phone"
+        },
+        "email": {
+            "label": "Email",
+            "placeholder": "youremail@website.com",
+            "icon": "fa-solid fa-envelope"
+        },
+        "message": {
+            "label": "Leave a message",
+            "placeholder": "Hello!"
+        },
+        "submit": {
+            "label": "Send"
+        }
+    }
+}

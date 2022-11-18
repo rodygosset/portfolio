@@ -1,0 +1,49 @@
+{
+    "sectionTitle": "COMPÉTENCES",
+    "caption": "Utilisez les flèches pour parcourir la liste",
+    "skillsList": [
+        {
+            "name": "Technologies Web Frontend",
+            "illustration": "/illustrations/web-technologies.svg",
+            "description": "",
+            "technologies": [
+                "NEXT.JS",
+                "REACT",
+                "JS",
+                "HTML",
+                "CSS"
+            ]
+        },
+        {
+            "name": "Outils de Design",
+            "illustration": "/illustrations/design-goals.svg",
+            "description": "",
+            "technologies": [
+                "FIGMA"
+            ]
+        },
+        {
+            "name": "Technologies Web Backend",
+            "illustration": "/illustrations/backend-server.svg",
+            "description": "",
+            "technologies": [
+                "NEXT.JS",
+                "NODE.JS",
+                "PYTHON",
+                "JAVA",
+                "PHP"
+            ]
+        },
+        {
+            "name": "Outils de développement",
+            "illustration": "/illustrations/version-control.svg",
+            "description": "",
+            "technologies": [
+                "GIT",
+                "GITHUB",
+                "DOCKER",
+                "JIRA"
+            ]
+        }
+    ]
+}

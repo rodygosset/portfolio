@@ -1,0 +1,49 @@
+{
+    "sectionTitle": "SKILLS",
+    "caption": "Use the arrows to navigate the list",
+    "skillsList": [
+        {
+            "name": "Frontend Web Technologies",
+            "illustration": "/illustrations/web-technologies.svg",
+            "description": "",
+            "technologies": [
+                "NEXT.JS",
+                "REACT",
+                "JS",
+                "HTML",
+                "CSS"
+            ]
+        },
+        {
+            "name": "Design Tools",
+            "illustration": "/illustrations/design-goals.svg",
+            "description": "",
+            "technologies": [
+                "FIGMA"
+            ]
+        },
+        {
+            "name": "Backend Web Technologies",
+            "illustration": "/illustrations/backend-server.svg",
+            "description": "",
+            "technologies": [
+                "NEXT.JS",
+                "NODE.JS",
+                "PYTHON",
+                "JAVA",
+                "PHP"
+            ]
+        },
+        {
+            "name": "Developer Tools",
+            "illustration": "/illustrations/version-control.svg",
+            "description": "",
+            "technologies": [
+                "GIT",
+                "GITHUB",
+                "DOCKER",
+                "JIRA"
+            ]
+        }
+    ]
+}

@@ -16,7 +16,7 @@ export interface ContextType {
 export const defaultContext: ContextType = {
     appData: {
         theme: "light",
-        lang: "fr"
+        lang: "en"
     },
     setAppData: (data) => {},
 }

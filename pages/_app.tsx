@@ -13,8 +13,6 @@ interface MyAppProps extends AppProps {
 }
 
 const MyApp = ({ Component, pageProps, globalData }: MyAppProps) => {
-
-  console.log(globalData)
   
 
   // set up the context (app data) that will be shared accross pages

@@ -1,60 +1,86 @@
 
 
-import styles from "@styles/Home.module.scss"
-import { GetStaticProps, GetStaticPropsResult, NextPage } from "next"
+import styles from "@styles/pages/home.module.scss"
+import { GetStaticProps, NextPage } from "next"
 import Image from 'next/image'
 import { HeroContentType } from "types/hero"
 import { useContext, useEffect, useState } from "react"
 import { GlobalContext } from "utils/context"
 
 
+
 import HeroContentEN from '@content/en/heroContent.json'
 import HeroContentFR from '@content/fr/heroContent.json'
 
 
+import NavItemsEN from '@content/en/navItems.json'
+import NavItemsFR from '@content/fr/navItems.json'
+
+
+import GradientShape from '@images/gradient-background-shape.svg'
+
 import rody from '@content/rody.json'
 import { Rody } from "types/rody"
+import Nav from "@components/nav"
+import { NavItemsType } from "types/nav"
 
 interface HeroProps {
     content: {
         [lang: string]: HeroContentType
     },
+    navItems: {
+        [lang: string]: NavItemsType
+    },
     rodyData: Rody
 }
 
-const HeroSection: NextPage<HeroProps> = ({ content, rodyData }) => {
+const HeroSection: NextPage<HeroProps> = ({ content, navItems, rodyData }) => {
 
     const { appData } = useContext(GlobalContext)
 
-    const [contentLang, setContentLang] = useState(Object.keys(content).find(key => key == appData.lang))
+    const [pageContent, setPageContent] = useState<HeroContentType>(appData.lang ? content[appData.lang] : content.en)
 
-    const [pageContent, setPageContent] = useState<HeroContentType>(contentLang ? content[contentLang] : content.en)
 
-    useEffect(() => {
-        setContentLang(appData.lang)
-    }, [appData.lang])
-
-    useEffect(() => setPageContent(contentLang ? content[contentLang] : content.en), [contentLang])
+    useEffect(() => setPageContent(appData.lang ? content[appData.lang] : content.en), [appData.lang])
 
     return (
         <div className={styles.main}>
+            <Nav navItems={navItems} rodyData={rodyData} />
             <main>
-                <p>{pageContent.greeting}<span>{rodyData.firstName}</span></p>
-                <h1>{pageContent.jobTitle}</h1>
-                <Image src={'/images/my-memoji.svg'} alt={'my memoji'} width="300" height="300" />
+                <section className={styles.hero}>
+                    <p>{pageContent.greeting}<span>{rodyData.firstName}</span></p>
+                    <h1 dangerouslySetInnerHTML={{__html: pageContent.jobTitle}}></h1>
+                    <div className={styles.illustrationContainer}>
+                        <GradientShape/>
+                        <Image 
+                            quality={100}
+                            src={'/images/my-memoji-high-quality.png'} 
+                            alt={'My memoji'} 
+                            width="300" 
+                            height="300" 
+                        />
+                    </div>
+                    <div className={styles.btnGradientContainer}>
+                        <button>{pageContent.projectsLink}</button>
+                    </div>
+                </section>
             </main>
         </div>
     )
 
 }
 
-export const getStaticProps: GetStaticProps = async (): Promise<GetStaticPropsResult<HeroProps>> => {
+export const getStaticProps: GetStaticProps<HeroProps> = async () => {
     
     return {
         props: {
             content: {
                 en: HeroContentEN,
                 fr: HeroContentFR
+            },
+            navItems: {
+                en: NavItemsEN,
+                fr: NavItemsFR
             },
             rodyData: rody
         }

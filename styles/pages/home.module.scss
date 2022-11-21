@@ -1,0 +1,106 @@
+@import '@styles/base/_colors';
+@import '@styles/layout/nav.module';
+
+.main {
+
+    h1, p {
+        margin: 0;
+    }
+
+
+    width: 100%;
+    height: 100%;
+
+    main {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: calc(100% - $nav-height);
+
+        section {
+            display: flex;
+            flex-flow: column nowrap;
+            width: 100%;
+            height: 100%;
+            padding: 5% 0;
+        }
+
+        section.hero {
+
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                font-size: 48px;
+                text-align: center;
+                font-weight: 600;
+                background: $main-gradient;
+                background-clip: text;
+                color: transparent;
+            }
+    
+            p {
+                font-size: 20px;
+                text-align: center;
+                font-weight: 500;
+                color: $faded-black-40;
+    
+                span {
+                    color: $full-black;
+                }
+            }
+
+
+            .illustrationContainer {
+
+                position: relative;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 400px;
+
+                img {
+                    margin: 0;
+
+                }
+
+                svg {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    z-index: -1;
+                }
+
+            }
+
+            .btnGradientContainer {
+                border-radius: 30px;
+                border: double 3px transparent;
+                background-image: linear-gradient($white, $white), radial-gradient(circle at top left, $primary 0%, $secondary 100%);
+                background-origin: border-box;
+                background-clip: padding-box, border-box;
+            }
+
+            button {
+                padding: 10px 20px;
+                border: none;
+                font-weight: 600;
+                font-size: 16px;
+                background: $main-gradient;
+                background-clip: text;
+                color: transparent;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+    }
+    
+
+}

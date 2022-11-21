@@ -16,6 +16,9 @@ import HeroContentFR from '@content/fr/heroContent.json'
 import NavItemsEN from '@content/en/navItems.json'
 import NavItemsFR from '@content/fr/navItems.json'
 
+import ThemeOptionsEN from '@content/en/themes.json'
+import ThemeOptionsFR from '@content/fr/themes.json'
+
 
 import GradientShape from '@images/gradient-background-shape.svg'
 
@@ -23,6 +26,7 @@ import rody from '@content/rody.json'
 import { Rody } from "types/rody"
 import Nav from "@components/nav"
 import { NavItemsType } from "types/nav"
+import { ThemeOptionType } from "types/theme"
 
 interface HeroProps {
     content: {
@@ -31,10 +35,13 @@ interface HeroProps {
     navItems: {
         [lang: string]: NavItemsType
     },
+    themes: {
+        [lang: string]: ThemeOptionType
+    },
     rodyData: Rody
 }
 
-const HeroSection: NextPage<HeroProps> = ({ content, navItems, rodyData }) => {
+const HeroSection: NextPage<HeroProps> = ({ content, navItems, themes, rodyData }) => {
 
     const { appData } = useContext(GlobalContext)
 
@@ -45,7 +52,11 @@ const HeroSection: NextPage<HeroProps> = ({ content, navItems, rodyData }) => {
 
     return (
         <div className={styles.main}>
-            <Nav navItems={navItems} rodyData={rodyData} />
+            <Nav 
+                navItems={navItems}
+                themeOptions={themes} 
+                rodyData={rodyData} 
+            />
             <main>
                 <section className={styles.hero}>
                     <p>{pageContent.greeting}<span>{rodyData.firstName}</span></p>
@@ -81,6 +92,10 @@ export const getStaticProps: GetStaticProps<HeroProps> = async () => {
             navItems: {
                 en: NavItemsEN,
                 fr: NavItemsFR
+            },
+            themes: {
+                en: ThemeOptionsEN,
+                fr: ThemeOptionsFR
             },
             rodyData: rody
         }

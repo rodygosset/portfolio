@@ -1,13 +1,85 @@
+@import '@styles/base/_typography.scss';
+@import '@styles/base/_colors.scss';
+
 
 $nav-height: 80px;
 
 .nav {
 
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
+    background: linear-gradient(180deg, $faded-white-20 100%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(25px);
+
+    padding: 0 5%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
     height: $nav-height;
 
+    a {
+        font-weight: 600;
+        font-size: $font-size-button;
+        background: $main-gradient;
+        background-clip: text;
+        color: transparent;
 
-    .current {
-        // todo
+        &:hover {
+            cursor: pointer;
+        }
+
+    }
+
+    ul {
+
+        margin: 0;
+        display: flex;
+
+        li {
+            list-style: none;
+            font-size: $font-size-caption;
+            font-weight: 600;
+            color: $faded-black-40;
+            padding: 10px 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    
+        li.current {
+            color: $full-black;
+        }
+    }
+
+    .options {
+
+        display: flex;
+        flex-flow: row nowrap;
+
+        button {
+            padding: 10px 20px;
+            color: $secondary;
+            font-size: $font-size-caption;
+            font-weight: 600;
+            background: none;
+            border: none;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 10px;
+
+            svg {
+                width: 18px;
+            }
+        }
     }
     
 }

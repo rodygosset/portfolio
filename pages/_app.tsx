@@ -42,6 +42,7 @@ const MyApp = ({ Component, pageProps, globalData }: MyAppProps) => {
         <title>{title}</title>
         <meta name="description" content="Rody Gosset's personal web developer & designer portfolio." />
         <link rel="icon" href="/favicon.png" type="image/svg+xml" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Component {...pageProps} />
     </GlobalContext.Provider>

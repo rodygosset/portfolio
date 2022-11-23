@@ -57,6 +57,12 @@ const Nav = ({ navItems, themeOptions, rodyData }: NavProps) => {
         <nav className={styles.nav}>
             <a onClick={scrollToTop}>{rodyData.firstName} {rodyData.lastName}</a>
             <div className={getWrapperClassNames()}>
+                {
+                    showWrapper &&
+                    <div className={styles.toggleContainer}>
+                        <GradientCloseIcon className={styles.toggle} onClick={() => setShowWrapper(!showWrapper)} />
+                    </div>
+                }
                 <ul>
                 {
                     Object.keys(navItems[appData.lang]).map((itemKey, index) => {

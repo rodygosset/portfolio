@@ -62,19 +62,28 @@ const HeroSection: NextPage<HeroProps> = ({ content, navItems, themes, rodyData 
                     <p>{pageContent.greeting}<span>{rodyData.firstName}</span></p>
                     <h1 dangerouslySetInnerHTML={{__html: pageContent.jobTitle}}></h1>
                     <div className={styles.illustrationContainer}>
-                        <GradientShape/>
                         <Image 
                             quality={100}
-                            src={'/images/my-memoji-high-quality.png'} 
+                            src={'/images/gradient-background-shape.svg'} 
+                            alt={'Gradient Background Shape'} 
+                            fill
+                            style={{ objectFit: "contain", maxWidth: "400px", maxHeight: "254px", top: "auto" }}
+                        />
+                        <Image 
+                            quality={100}
+                            src={'/images/my-memoji-high-quality-cropped.png'} 
                             alt={'My memoji'} 
-                            width="300" 
-                            height="300" 
+                            fill
+                            style={{ objectFit: "contain", maxWidth: "300px", maxHeight: "248px", top: "auto" }}
                         />
                     </div>
                     <div className={styles.btnGradientContainer}>
                         <button>{pageContent.projectsLink}</button>
                     </div>
                 </section>
+                {/* <section className={styles.aboutMe}>
+
+                </section> */}
             </main>
         </div>
     )

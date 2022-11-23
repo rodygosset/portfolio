@@ -2,7 +2,11 @@
 $main-gradient: linear-gradient(100deg, #0466C8 0%, #9D4EDD 100%);
 
 $primary: #0466C8;
+$faded-primary-20: rgba($color: $primary, $alpha: 0.2);
+$faded-primary-40: rgba($color: $primary, $alpha: 0.4);
 $secondary: #9D4EDD;
+$faded-secondary-20: rgba($color: $secondary, $alpha: 0.2);
+$faded-secondary-40: rgba($color: $secondary, $alpha: 0.4);
 
 $white: #FFF;
 $faded-white-20: rgba($color: $white, $alpha: 0.2);

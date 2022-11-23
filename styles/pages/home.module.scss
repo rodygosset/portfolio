@@ -16,25 +16,29 @@
     height: 100%;
 
     main {
+        position: absolute;
+        top: 0;
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 100%;
+        height: calc(100vh - $nav-height);
+        margin-top: $nav-height;
 
         section {
             display: flex;
             flex-flow: column nowrap;
             width: 100%;
             height: 100%;
-            padding: 5% 0;
+            padding: 5vh 0;
         }
 
         section.hero {
 
             justify-content: space-between;
             align-items: center;
+            gap: 45px;
 
             h1 {
                 font-size: 48px;
@@ -43,6 +47,7 @@
                 background: $main-gradient;
                 background-clip: text;
                 color: transparent;
+                padding: 0 5vw;
             }
     
             p {
@@ -56,7 +61,6 @@
                 }
             }
 
-
             .illustrationContainer {
 
                 position: relative;
@@ -64,15 +68,18 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 400px;
+                width: 100vw;
+                height: 400px;
+                max-width: 400px;
+
+
 
                 img {
-                    margin: 0;
-
+                    margin: 0 auto;
+                    bottom: 0;
                 }
 
                 svg {
-                    position: absolute;
                     left: 0;
                     bottom: 0;
                     z-index: -1;

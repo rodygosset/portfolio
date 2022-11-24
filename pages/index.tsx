@@ -67,14 +67,28 @@ const HeroSection: NextPage<HeroProps> = ({ content, navItems, themes, rodyData 
                             src={'/images/gradient-background-shape.svg'} 
                             alt={'Gradient Background Shape'} 
                             fill
-                            style={{ objectFit: "contain", maxWidth: "400px", maxHeight: "254px", top: "auto" }}
+                            style={{ 
+                                objectFit: "contain", 
+                                maxWidth: "400px", 
+                                maxHeight: "254px", 
+                                top: "auto",
+                                aspectRatio: "1.575"
+                            }}
                         />
                         <Image 
                             quality={100}
                             src={'/images/my-memoji-high-quality-cropped.png'} 
                             alt={'My memoji'} 
                             fill
-                            style={{ objectFit: "contain", maxWidth: "300px", maxHeight: "248px", top: "auto" }}
+                            style={{ 
+                                objectFit: "contain", 
+                                maxWidth: "300px", 
+                                maxHeight: "248px", 
+                                top: "auto",
+                                aspectRatio: "1.21"
+                                // minWidth: "200px",
+                                // minHeight: "165px"
+                            }}
                         />
                     </div>
                     <div className={styles.btnGradientContainer}>

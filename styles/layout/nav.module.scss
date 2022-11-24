@@ -137,7 +137,8 @@ $nav-height: 80px;
             justify-content: space-around;
             z-index: 200;
 
-            transition: all 300ms ease-in-out;
+            transition: opacity 300ms ease-in-out, 
+                        backdrop-filter 300ms ease-in-out;
 
             .toggleContainer {
                 position: absolute;
@@ -162,10 +163,12 @@ $nav-height: 80px;
             visibility: visible;
             opacity: 1;
             backdrop-filter: blur(25px);
+            z-index: 400;
         }
 
         .hideWrapper {
-            visibility: hidden;
+            //visibility: hidden;
+            z-index: -200;
             opacity: 0;
             backdrop-filter: none;
         }

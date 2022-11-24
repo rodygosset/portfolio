@@ -19,12 +19,14 @@
         position: absolute;
         top: 0;
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row-reverse nowrap;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: calc(100vh - $nav-height);
         margin-top: $nav-height;
+        padding: 0 7vw;
+
 
         section {
             display: flex;
@@ -32,80 +34,206 @@
             width: 100%;
             height: 100%;
             padding: 5vh 0;
+
+            .sectionWrapper {
+
+                margin: auto 0;
+                
+                display: flex;
+                justify-content: center;
+                flex-flow: column nowrap;
+                align-items: center;
+                gap: 45px;
+
+            }
+
         }
 
         section.hero {
 
             justify-content: space-between;
             align-items: center;
-            gap: 45px;
 
-            h1 {
-                font-size: 48px;
-                text-align: center;
-                font-weight: 600;
-                background: $main-gradient;
-                background-clip: text;
-                color: transparent;
-                padding: 0 5vw;
-            }
+            .sectionWrapper {
+
+                h1 {
+                    font-size: 48px;
+                    text-align: center;
+                    font-weight: 600;
+                    background: $main-gradient;
+                    background-clip: text;
+                    color: transparent;
+                    padding: 0 5vw;
+                }
+        
+                p {
+                    font-size: 20px;
+                    text-align: center;
+                    font-weight: 500;
+                    color: $faded-black-40;
+        
+                    span {
+                        color: $full-black;
+                    }
+                }
     
-            p {
-                font-size: 20px;
-                text-align: center;
-                font-weight: 500;
-                color: $faded-black-40;
+                .illustrationContainer {
     
-                span {
-                    color: $full-black;
+                    position: relative;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100vw;
+                    min-width: 200px;
+                    max-width: 400px;
+                    aspect-ratio: 1.575;
+    
+    
+                    img {
+                        margin: 0 auto;
+                        bottom: 0;
+                    }
+    
                 }
+    
+                .btnGradientContainer {
+                    border-radius: 30px;
+                    border: double 3px transparent;
+                    background-image: linear-gradient($white, $white), radial-gradient(circle at top left, $primary 0%, $secondary 100%);
+                    background-origin: border-box;
+                    background-clip: padding-box, border-box;
+                }
+    
+                button {
+                    padding: 10px 20px;
+                    border: none;
+                    font-weight: 600;
+                    font-size: $font-size-button;
+                    background: $main-gradient;
+                    background-clip: text;
+                    color: transparent;
+    
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                }
+
+
             }
 
-            .illustrationContainer {
+        }
 
-                position: relative;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100vw;
-                min-width: 200px;
-                max-width: 400px;
-                aspect-ratio: 1.575;
+        section.aboutMe {
 
+            align-items: center;
 
-                img {
-                    margin: 0 auto;
-                    bottom: 0;
+            .sectionWrapper {
+
+                align-items: flex-start;
+
+                p {
+                    font-size: $font-size-text;
+                    font-weight: 500;
+                    color: $faded-black-40;
                 }
 
-            }
+                button {
+                    border: 2px solid $faded-secondary-20;
+                    background: none;
+                    color: $secondary;
+                    font-size: $font-size-caption;
+                    font-weight: 600;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-content: center;
+                    gap: 10px;
 
-            .btnGradientContainer {
-                border-radius: 30px;
-                border: double 3px transparent;
-                background-image: linear-gradient($white, $white), radial-gradient(circle at top left, $primary 0%, $secondary 100%);
-                background-origin: border-box;
-                background-clip: padding-box, border-box;
-            }
-
-            button {
-                padding: 10px 20px;
-                border: none;
-                font-weight: 600;
-                font-size: 16px;
-                background: $main-gradient;
-                background-clip: text;
-                color: transparent;
-
-                &:hover {
-                    cursor: pointer;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
+
+
+                svg {
+                    width: $font-size-button;
+                }
+
+                .interests {
+
+                    p {
+                        color: $secondary;
+                        font-size: $font-size-button;
+                    }
+
+                    ul {
+                        padding: 0;
+                        list-style: none;
+                        display: flex;
+                        flex-flow: row wrap;
+                        align-content: center;
+                        gap: 15px;
+
+                        li {
+                            display: flex;
+                            flex-flow: row nowrap;
+                            align-content: center;
+                            justify-content: center;
+                            gap: 5px;
+                            padding: 10px 15px;
+                            border-radius: 5px;
+                            color: $secondary;
+                            font-size: $font-size-xs;
+                            font-weight: 600;
+                            background: $faded-secondary-20;
+
+                            svg {
+                                height: $font-size-xs;
+                            }
+                        }
+                    }
+                }
+
             }
 
         }
 
     }
     
+
+}
+
+
+@media (max-width: $breakpoint-large) {
+
+    .main {
+
+        main {
+
+            height: auto;
+
+            flex-flow: column nowrap;
+
+            section.aboutMe {
+
+                .sectionWrapper {
+
+                    align-items: center;
+
+                    p {
+                        text-align: center;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
 
 }

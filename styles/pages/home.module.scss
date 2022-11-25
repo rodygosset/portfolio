@@ -165,6 +165,9 @@
 
                 .interests {
 
+                    display: flex;
+                    flex-flow: column nowrap;
+
                     p {
                         color: $secondary;
                         font-size: $font-size-button;
@@ -226,6 +229,17 @@
 
                     p {
                         text-align: center;
+                    }
+
+                    .interests {
+
+                        gap: 30px;
+
+                        ul {
+                            flex-flow: column nowrap;
+                            align-items: center;
+                            gap: 30px;
+                        }
                     }
 
                 }

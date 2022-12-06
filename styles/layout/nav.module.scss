@@ -24,6 +24,61 @@ $nav-height: 80px;
 
     height: $nav-height;
 
+    &.dark {
+
+        background: linear-gradient(180deg, rgba($color: $darkmode-black-bg, $alpha: 0.2) 100%, rgba($color: $darkmode-black-bg, $alpha: 0) 100%);
+
+        a {
+            color: $faded-white-80;
+        }
+
+        .toggle {
+            path {
+                fill: $faded-white-80;
+            } 
+        }
+
+        div.wrapper {
+
+            ul {
+
+                li {
+                    &.current {
+                        color: $faded-white-80;
+
+                        &:hover {
+                            color: $secondary;
+                            background: $faded-secondary-20;
+                            box-shadow: none;
+                        }
+                    }
+
+                    color: $faded-white-20;
+
+
+                    &:hover {
+                        color: $secondary;
+                        background: $faded-secondary-20;
+                        box-shadow: none;
+                    }
+
+                }
+
+            }
+
+            .toggle {
+                fill: none;
+                
+                path {
+                    fill: $white;
+                }
+                
+            }
+
+        }
+
+    }
+
     a {
         font-weight: 600;
         font-size: $font-size-button;
@@ -101,6 +156,10 @@ $nav-height: 80px;
                 svg {
                     width: 18px;
                 }
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -124,6 +183,37 @@ $nav-height: 80px;
 
     .nav {
 
+        &.dark {
+
+            div.wrapper {
+
+
+                backdrop-filter: blur(60px);
+                // background: $faded-black-20;
+                padding: 20px;
+                border-radius: 10px;
+
+                ul {
+
+                    li {
+                        &.current {
+                            &:hover {
+                                background: $faded-secondary-20;
+                                box-shadow: none;
+                            }
+                        }
+    
+                        &:hover {
+                            background: $faded-secondary-20;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
         .wrapper {
             position: absolute;
             width: 100vw;
@@ -131,6 +221,7 @@ $nav-height: 80px;
             top: 0;
             bottom: 0;
             left: 0;
+            right: 0;
             padding-top: $nav-height;
 
             flex-flow: column nowrap;
@@ -167,7 +258,7 @@ $nav-height: 80px;
         }
 
         .hideWrapper {
-            //visibility: hidden;
+            visibility: hidden;
             z-index: -200;
             opacity: 0;
             backdrop-filter: none;

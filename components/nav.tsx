@@ -13,6 +13,8 @@ import { GlobalContext } from "utils/context"
 import GradientCloseIcon from "@icons/gradient-close-icon.svg"
 import ModernBurgerIcon from "@icons/modern-burger-icon.svg"
 
+import Langs from "@content/langs.json"
+
 const scroll = Scroll.animateScroll
 
 
@@ -28,7 +30,7 @@ interface NavProps {
 
 const Nav = ({ navItems, themeOptions, rodyData }: NavProps) => {
 
-    const { appData } = useContext(GlobalContext)
+    const { appData, setAppData } = useContext(GlobalContext)
 
     const [current, setCurrent] = useState<string>(navItems[appData.lang][Object.keys(navItems[appData.lang])[0]])
 
@@ -53,8 +55,19 @@ const Nav = ({ navItems, themeOptions, rodyData }: NavProps) => {
         return classNames
     }
 
+    const isDarkMode = () => appData.theme == "dark"
+
+    const getClassNames = () => isDarkMode() ? styles.nav + ' ' + styles.dark : styles.nav
+
+    const toggleLang = () => {
+        const currentLangIdx = Langs.findIndex(lang => lang.lang == appData.lang)
+        const newLangIdx = currentLangIdx == 0 ? 1 : 0
+        setAppData({ ...appData, lang: Langs[newLangIdx].lang })
+
+    }
+
     return (
-        <nav className={styles.nav}>
+        <nav className={getClassNames()} style={showWrapper ? { backdropFilter: "none" } : {}}>
             <a onClick={scrollToTop}>{rodyData.firstName} {rodyData.lastName}</a>
             <div className={getWrapperClassNames()}>
                 {
@@ -77,11 +90,11 @@ const Nav = ({ navItems, themeOptions, rodyData }: NavProps) => {
                 }
                 </ul>
                 <div className={styles.options}>
-                    <button>
+                    <button onClick={toggleLang}>
                         <FontAwesomeIcon icon={faLanguage} />
                         {appData.lang.toUpperCase()}
                     </button>
-                    <button>
+                    <button onClick={() => setAppData({ ...appData, theme: isDarkMode() ? "light" : "dark"}) }>
                         <FontAwesomeIcon icon={appData.theme == "light" ? faSun : faMoon} />
                         {themeOptions[appData.lang][appData.theme]}
                     </button>

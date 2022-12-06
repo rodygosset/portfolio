@@ -4,10 +4,8 @@ import styles from "@styles/pages/home.module.scss"
 import { GetStaticProps, NextPage } from "next"
 import Image from 'next/image'
 import { HeroContentType } from "types/hero"
-import { useContext, useEffect, useState } from "react"
+import { MouseEventHandler, useContext, useEffect, useState } from "react"
 import { GlobalContext } from "utils/context"
-
-
 
 import HeroContentEN from '@content/en/heroContent.json'
 import HeroContentFR from '@content/fr/heroContent.json'
@@ -27,7 +25,8 @@ import { ThemeOptionType } from "types/theme"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDownload, faCompactDisc, faCode, faHeart } from "@fortawesome/free-solid-svg-icons"
 import { faFigma } from "@fortawesome/free-brands-svg-icons"
-import { IconDefinition, IconName, IconPrefix, IconProp } from "@fortawesome/fontawesome-svg-core"
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
+import Router from "next/router"
 
 interface HeroProps {
     content: {
@@ -51,8 +50,21 @@ const HeroSection: NextPage<HeroProps> = ({ content, navItems, themes, rodyData 
 
     useEffect(() => setPageContent(appData.lang ? content[appData.lang] : content.en), [appData.lang])
 
+    
+    const isDarkMode = () => appData.theme == "dark"
+
+    const getClassNames = () => isDarkMode() ? styles.main + ' ' + styles.dark : styles.main
+
+
+    const handleClick: MouseEventHandler<HTMLDivElement> = e => {
+        e.stopPropagation()
+        e.preventDefault()
+        Router.push('/#projects')
+    }
+
+
     return (
-        <div className={styles.main}>
+        <div className={getClassNames()}>
             <Nav 
                 navItems={navItems}
                 themeOptions={themes} 
@@ -91,8 +103,8 @@ const HeroSection: NextPage<HeroProps> = ({ content, navItems, themes, rodyData 
                                 }}
                             />
                         </div>
-                        <div className={styles.btnGradientContainer}>
-                            <button>{pageContent.projectsLink}</button>
+                        <div className={styles.btnGradientContainer} onClick={handleClick}>
+                            <a href="#projects">{pageContent.projectsLink}</a>
                         </div>
                     </div>
                 </section>

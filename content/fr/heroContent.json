@@ -1,8 +1,8 @@
 {
     "greeting": "Hello, moi c’est ",
     "jobTitle": "développeur & designer <br/>web",
-    "projectsLink": "Découvrez mes projets",
-    "introParagraph": "J’aspire à concevoir et <br/>réaliser des produits intuitifs <br/>pour les utilisateurs, <br/>tout en façonnant des interfaces graphiques visuellement attractives.",
+    "projectsLink": "Découvrir mes projets",
+    "introParagraph": "J’aspire à concevoir et <br/>réaliser des produits intuitifs <br/>pour les utilisateurs, <br/>tout en façonnant des interfaces<br/> graphiques visuellement attractives.",
     "resumeDownloadButton": "Apprenez-en plus dans mon CV",
     "interestsIntroText": "Ce que j'aime",
     "interests": [

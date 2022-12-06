@@ -11,20 +11,89 @@
         margin: 0;
     }
 
-
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    display: flex;
+    
+    // dark theme
+
+    &.dark {
+
+        background: $darkmode-black-bg;
+
+        main {
+
+            section {
+                
+                div.sectionWrapper {
+
+                    p {
+                        color: $faded-white-40;
+                        span {
+                            color: $white;
+                        }
+                    }
+
+                }
+
+                &.hero {
+
+                    div.sectionWrapper {
+
+                        p {
+                            span {
+                                color: $faded-white-80;
+                            }
+                        }
+                    }
+
+                    div.btnGradientContainer {
+                        border-radius: 30px;
+                        border: double 3px transparent;
+                        background-image: linear-gradient($darkmode-black-bg, $darkmode-black-bg), radial-gradient(circle at top left, $primary 0%, $secondary 100%);
+                        background-origin: border-box;
+                        background-clip: padding-box, border-box;
+                    
+                        &:hover {
+                            box-shadow: none;
+                        }
+
+                    }
+
+                }
+
+                &.aboutMe {
+
+                    div.sectionWrapper {
+
+                        button {
+
+                            &:hover {
+    
+                                color: $faded-white-80;
+                                box-shadow: none;
+    
+                            }
+    
+                        }
+                    }
+
+                }
+            }
+            
+        }
+
+    }
+
+    // light
 
     main {
-        position: absolute;
-        top: 0;
         display: flex;
         flex-flow: row-reverse nowrap;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: calc(100vh - $nav-height);
-        margin-top: $nav-height;
         padding: 0 7vw;
 
 
@@ -103,11 +172,24 @@
                     background-image: linear-gradient($white, $white), radial-gradient(circle at top left, $primary 0%, $secondary 100%);
                     background-origin: border-box;
                     background-clip: padding-box, border-box;
+                    padding: 10px 20px;
+
+                    transition: all 200ms ease-in-out;
+
+                    &:hover {
+                        cursor: pointer;
+                        // background-image: none;
+                        // background: $main-gradient;
+                        // border: 3px solid rgba($color: $white, $alpha: 1);
+                        transform: scale(1.1);
+                        box-shadow: 0px 20px 40px $faded-primary-20;
+                    }
                 }
     
-                button {
-                    padding: 10px 20px;
+                a {
+                    text-decoration: none;
                     border: none;
+                    border-radius: 30px;
                     font-weight: 600;
                     font-size: $font-size-button;
                     background: $main-gradient;
@@ -140,7 +222,7 @@
                 }
 
                 button {
-                    border: 2px solid $faded-secondary-20;
+                    border: 3px solid $faded-secondary-20;
                     background: none;
                     color: $secondary;
                     font-size: $font-size-caption;
@@ -155,6 +237,9 @@
 
                     &:hover {
                         cursor: pointer;
+                        background: $secondary;
+                        color: $white;
+                        box-shadow: 0px 15px 30px $faded-secondary-40;
                     }
                 }
 
@@ -214,6 +299,16 @@
 @media (max-width: $breakpoint-large) {
 
     .main {
+
+        &.dark {
+
+            main {
+
+                
+
+            }
+
+        }
 
         main {
 

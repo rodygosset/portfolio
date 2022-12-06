@@ -12,7 +12,11 @@ $white: #FFF;
 $faded-white-20: rgba($color: $white, $alpha: 0.2);
 $faded-white-40: rgba($color: $white, $alpha: 0.4);
 $faded-white-60: rgba($color: $white, $alpha: 0.6);
+$faded-white-80: rgba($color: $white, $alpha: 0.8);
 
 $full-black: #000;
-
+$faded-black-20: rgba($color: $full-black, $alpha: 0.2);
 $faded-black-40: rgba($color: $full-black, $alpha: 0.4);
+
+
+$darkmode-black-bg: #111;
